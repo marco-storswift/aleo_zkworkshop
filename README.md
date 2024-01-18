@@ -14,13 +14,13 @@ git clone https://github.com/AleoHQ/snarkOS.git --depth 1
 cd snarkOS
 cargo install --path .
 
-#5. 安装soter钱包
+# 5. 安装soter钱包
 https://sotertech.io/download/
 
-#6. 初始化leo合约
-leo new {$NAME}
+# 6. 初始化leo合约
+```leo new {$NAME}```
 
-package/
+```package/
 ├── .env # 环境变量
 ├── program.json # 配置文件
 ├── README.md 
@@ -29,15 +29,26 @@ package/
 │ ├── hello.in # 程序输入
 └── src/
   └── main.leo # 程序文件
+```
 
-#7. 编译leo文件
-leo build
+# 7. 编译leo文件
+```leo build```
 
-console output:
+```console output:
      Leo ✅ Compiled 'main.leo' into Aleo instructions
-
-#8. 部署到aleo网络
+```
+# 8. 部署到aleo网络
+```
 snarkos developer deploy --private-key {$PRIVATE_KEY} --priority-fee 100 --query {$NODE_URL} --broadcast {$NODE_URL}/testnet3/transaction/broadcast ./build
+```
 
-#9. 执行合约
+# 9. 执行合约
+```
 snarkos developer execute {$PACKAGE_NAME} {$FUNCTION_NAME} \'{$PARAMETER}\' --private-key {$PRIVATE_KEY} --priority-fee 100 --query {$NODE_URL} --broadcast {$NODE_URL}/testnet3/transaction/broadcast
+```
+
+# 10. 使用aleo123 部署合约
+<img src="image/img.png">
+<img src="image/img_1.png">
+<img src="image/img_2.png">
+
